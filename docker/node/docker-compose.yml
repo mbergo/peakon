@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+  db:
+    image: "postgres"
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_DB=peakon_db
+      - POSTGRES_USER=peakon_usr
+      - POSTGRES_PASSWORD=peakon_pass
+      - POSTGRES_PORT=5432
